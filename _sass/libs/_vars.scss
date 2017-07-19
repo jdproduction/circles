@@ -15,7 +15,7 @@
 	$duration: (
 		transitions:		0.2s,
 		menu:				0.5s,
-		fadein:				3s
+		fadein:				1.4s
 	);
 
 // Size.
@@ -37,7 +37,8 @@
 
 // Palette.
 	$palette: (
-		bg:					#2e3842,
+		//bg:					#2e3842,
+    bg:         #185da2,
 		fg:					#fff,
 		fg-bold:			#fff,
 		fg-light:			rgba(255,255,255,0.5),
@@ -47,10 +48,11 @@
 		border2-bg:			rgba(144,144,144,0.5),
 
 		accent1: (
-			bg:				#21b2a6,
+			//bg:				#21b2a6,
+      bg:       #188370,
 			fg-bold:		#ffffff,
-			fg:				mix(#21b2a6, #ffffff, 25%),
-			fg-light:		mix(#21b2a6, #ffffff, 40%),
+			fg:				mix(#188370, #ffffff, 25%),
+			fg-light:		mix(#188370, #ffffff, 40%),
 			border:			rgba(0,0,0,0.125),
 			border-bg:		rgba(255,255,255,0.075),
 			border2:		rgba(0,0,0,0.25),
@@ -114,7 +116,8 @@
 
 		accent7: (
 			bg:				#ffffff,
-			fg-bold:		#2E3842,
+			//fg-bold:		#2E3842,
+      fg-bold:    #185da2,
 			fg:				#4E4852,
 			fg-light:		#8E8892,
 			border:			#dfdfdf,

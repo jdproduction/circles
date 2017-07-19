@@ -52,21 +52,21 @@ $baseurl: '{{ site.baseurl }}/images';
 	body, input, select, textarea {
 		color: _palette(fg);
 		font-family: _font(family);
-		font-size: 15pt;
+		font-size: 16pt;
 		font-weight: _font(weight);
 		letter-spacing: _size(letter-spacing);
 		line-height: 1.65em;
 
 		@include breakpoint(xlarge) {
-			font-size: 13pt;
+			font-size: 14pt;
 		}
 
 		@include breakpoint(large) {
-			font-size: 12pt;
+			font-size: 13pt;
 		}
 
 		@include breakpoint(small) {
-			font-size: 11pt;
+			font-size: 12pt;
 			letter-spacing: _size(letter-spacing) * 0.5;
 		}
 	}
@@ -239,6 +239,8 @@ $baseurl: '{{ site.baseurl }}/images';
 
 		&.major {
 			margin: 0 0 (_size(element-margin) * 1.75) 0;
+      padding: 2em;
+
 
 			h2, h3, h4, h5, h6 {
 				border-bottom: solid 2px _palette(border);
@@ -987,7 +989,7 @@ $baseurl: '{{ site.baseurl }}/images';
 		}
 
 		@for $i from 1 through _misc(max-spotlights) {
-			$j: 0.075 * $i;
+			$j: 0.15 * $i;
 
 			&:nth-child(#{$i}) {
 				background-color: rgba(0,0,0, $j);
@@ -1028,7 +1030,9 @@ $baseurl: '{{ site.baseurl }}/images';
 				@include padding(3em, 2em);
 			}
 		}
+
 	}
+
 
 /* Wrapper */
 
@@ -1066,6 +1070,8 @@ $baseurl: '{{ site.baseurl }}/images';
 				}
 
 				&.major {
+
+
 					h2, h3, h4, h5, h6 {
 						border-color: _palette($p, border);
 					}
@@ -1227,7 +1233,7 @@ $baseurl: '{{ site.baseurl }}/images';
 			margin: 0 auto;
 
 			@include breakpoint(large) {
-				width: 90%;
+				width: 80%;
 			}
 
 			@include breakpoint(medium) {
@@ -1236,11 +1242,14 @@ $baseurl: '{{ site.baseurl }}/images';
 		}
 
 		&.alt {
-			padding: 0;
+			padding: 1;
 		}
 
 		&.style1 {
 			@include wrapper(accent1);
+      //background-color: _palette(accent1, bg);
+      //background-color: #111111;
+
 		}
 
 		&.style2 {
@@ -1267,6 +1276,8 @@ $baseurl: '{{ site.baseurl }}/images';
 			@include padding(3em, 2em);
 		}
 	}
+
+
 
 /* Page Wrapper + Menu */
 
@@ -1530,6 +1541,17 @@ $baseurl: '{{ site.baseurl }}/images';
 			}
 		}
 
+    #logo {
+				background-image: url("#{$baseurl}/logo.png");
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: contain;
+				bottom: 4em;
+				content: '';
+				display: block;
+        height: 20vh;
+    }
+
 		.more {
 			@include vendor('transition', ('transform 0.75s ease', 'opacity 0.75s ease'));
 			@include vendor('transition-delay', '3.5s');
@@ -1675,7 +1697,8 @@ $baseurl: '{{ site.baseurl }}/images';
 	#main {
 		> header {
 			@include padding(12em, 0);
-			@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("#{$baseurl}/banner.jpg")'));
+			//@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("#{$baseurl}/banner.jpg")'));
+			@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("#{$baseurl}/mntr-1900.jpg")'));
 			background-attachment: fixed;
 			background-position: center center;
 			background-repeat: no-repeat;
@@ -1800,7 +1823,7 @@ $baseurl: '{{ site.baseurl }}/images';
 
 	body.landing {
 		#page-wrapper {
-			@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("#{$baseurl}/banner.jpg")'));
+			@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("#{$baseurl}/mntr-1900.jpg")'));
 			background-attachment: fixed;
 			background-position: center center;
 			background-repeat: no-repeat;
@@ -1822,6 +1845,7 @@ $baseurl: '{{ site.baseurl }}/images';
 			#banner,
 			.wrapper.style4 {
 				@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("#{$baseurl}/banner.jpg")'));
+				@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("#{$baseurl}/mntr-1900.jpg")'));
 				background-position: center center;
 				background-repeat: no-repeat;
 				background-size: cover;
