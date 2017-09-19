@@ -2,6 +2,8 @@
 .sass-cache/
 _site
 
+CNAME
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
