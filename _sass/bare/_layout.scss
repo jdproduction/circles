@@ -41,6 +41,7 @@
 		.page-link {
 				color: white;
 				line-height: $base-line-height;
+        font-weight: 500;
 
 				// Gaps between nav items, but not on the last one
 				&:not(:last-child) {
@@ -57,7 +58,7 @@
 
     @include relative-font-size(2);
     
-    font-weight: 300;
+    font-weight: 500;
     line-height: $base-line-height * $base-font-size * 2.25;
     //letter-spacing: -1px;
     margin-bottom: 0;
@@ -68,7 +69,7 @@
 .home {
 
   background-color: $site-green;
-  height: calc(100vh - 4.2em);
+  min-height: calc(100vh - 4.2em);
   margin-top: 4.2em;
   //margin-bottom: -4.2em;
   display:flex;
@@ -76,41 +77,60 @@
 
   .home-left {
     background-color: $background-color;
-    display: flex;
-    flex-direction: column;
     width: $content-width / 2;
     padding-right: 3em;
   }
 
   .headshot {
-    vertical-align: bottom;
-    margin-bottom: 20vh;
+    //vertical-align: middle;
     margin-left: 3em;
-    margin-top: auto;
+    margin-top: 2em;
+    margin-bottom: auto;
 
     img#headshot {
       max-width: 400px; 
+    }
+
+    .caption {
+      h1 {
+        margin-bottom: 0;
+      }
     }
   }
 
   .home-right {
     background-color: $background-color;
-    margin: 1em;
-    padding: 2em;
+    margin: 0 1em;
+    padding: 2em 2em;
     text-align: right;
   }
 
   .blurb {
-    @include relative-font-size(1.5);
+    @include relative-font-size(1.2);
+    font-weight: 500;
+    color: #777;
     padding: 1em 1em 1em 140px;
 
-    margin-top: 5em;
+    margin-bottom: 2em;
     border-bottom: 2px solid $green-background-color;
     border-top: 2px solid $green-background-color;
     background-image: url(images/Star2-05.png);
     background-size: 140px;
     background-repeat: no-repeat;
     background-position: left bottom;
+
+    &.right {
+
+      text-align: left; 
+      @include relative-font-size(1);
+      background-position: right top;
+      padding: 1em ;
+
+      p.first {
+        padding-right: 140px;
+      }
+      
+    }
 
   }
 
