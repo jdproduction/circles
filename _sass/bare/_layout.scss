@@ -1,12 +1,10 @@
 @import 'sass-flexbox/sass-flexbox';
 
 #site-wrapper{
-
   min-height: 100vh;
   width: $content-width;
   margin: 0 auto;
   background-color: $background-color;
-
 }
 
 
@@ -118,12 +116,9 @@ img.right-star {
 .blurb {
   @include relative-font-size(1.2);
   font-weight: 500;
-  color: #777;
-  padding: 1em ;
+  padding: 0 1em 1em 1em ;
+  margin-bottom: 1em;
 
-  margin-bottom: 2em;
-  border-bottom: 2px solid $green-background-color;
-  border-top: 2px solid $green-background-color;
   /**
   background-image: url(images/Star2-05.png);
   background-size: 140px;
@@ -133,26 +128,35 @@ img.right-star {
   
   text-align:right;
 
+  &:not(:first-of-type) {
+    border-top: 2px solid $green-background-color;
+    padding-top: 2em;
+  }
+
 
   h3 {
     text-align:left;
   }
 
   &.right {
+    //border-bottom: 2px solid $green-background-color;
 
     text-align: left; 
-    @include relative-font-size(1);
+   // @include relative-font-size(1);
     background-position: right top;
-    padding: 1em ;
+    //padding: 1em ;
 
     p.first {
       //padding-right: 140px;
     }
-    
   }
-
 }
 
+h1.mid-title {
+  color: $site-green;
+  font-weight: 500;
+  margin-bottom: 0;
+}
 
 .right-float-spacer {
   display: block;
@@ -160,6 +164,11 @@ img.right-star {
   height: 100px;
   float: right;
   background-color: transparent;
+}
+
+section#bio {
+
+
 }
 
 
