@@ -5,6 +5,7 @@
   width: $content-width;
   margin: 0 auto;
   background-color: $background-color;
+  border-right: 1px solid $site-green;
 }
 
 
@@ -86,7 +87,6 @@
 
 .home-right {
   background-color: $background-color;
-  border-right: 4px solid $site-green;
   margin: 0 0 0 0;
   margin-left: $content-width * .45  + 15px;
   padding: 2em 2em;
@@ -126,7 +126,7 @@ img.right-star {
 
 .blurb {
   @include relative-font-size(1.2);
-  font-weight: 500;
+  //font-weight: 500;
   padding: 0 1em 1em 1em ;
   text-align:right;
 
