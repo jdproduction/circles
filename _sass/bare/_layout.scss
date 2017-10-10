@@ -10,7 +10,7 @@
 
 .site-header {
   width: inherit;
-  padding: 0 1em 0 3.4em;
+  padding: 0 1em 0 0 ;
   background-color: $site-green;
   opacity: 0.80;
   color: #FFFFFF;
@@ -54,6 +54,10 @@
     color: white;
     text-decoration: none;
   }
+  text-align:right;
+  display: inline-block;
+  width: $content-width * .45;
+  padding-right: 1.5em;
 }
 
 .home {
@@ -76,7 +80,9 @@
   margin: .2em;
   position: fixed;
   //border-right: 4px solid $green-background-color;
+  text-align: right;
 }
+
 
 .home-right {
   background-color: $background-color;
@@ -109,6 +115,8 @@ img.right-star {
   }
 
   .caption {
+    margin-left: 3em;
+    margin-top: 1em;
     h1 {
       margin-bottom: 0;
     }
@@ -120,15 +128,6 @@ img.right-star {
   @include relative-font-size(1.2);
   font-weight: 500;
   padding: 0 1em 1em 1em ;
-  margin-bottom: 1em;
-
-  /**
-  background-image: url(images/Star2-05.png);
-  background-size: 140px;
-  background-repeat: no-repeat;
-  background-position: left top;
-  **/
-  
   text-align:right;
 
   &:not(:first-of-type) {
@@ -159,7 +158,9 @@ h1.mid-title {
   color: $site-green;
   font-weight: 500;
   margin-bottom: 0;
+  @include relative-font-size(2);
 }
+
 
 .right-float-spacer {
   display: block;
