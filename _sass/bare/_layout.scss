@@ -10,7 +10,7 @@
 
 .site-header {
   width: inherit;
-  padding: 0 1em;
+  padding: 0 1em 0 3.4em;
   background-color: $site-green;
   opacity: 0.80;
   color: #FFFFFF;
@@ -57,7 +57,6 @@
 }
 
 .home {
-  // background-color: $site-green;
   min-height: calc(100vh - 4.2em);
   margin-top: 4.23em;
   //margin-bottom: -4.2em;
@@ -66,21 +65,24 @@
 }
 
 .home-left {
-  background-color: $background-color;
-  width: $content-width / 2;
+  //background-color: $background-color;
+  background-color: $fade-background;
+  color: #333;
+  width: $content-width * .45;
   min-height: calc(100vh - 4.2em);
   //min-height: 100%;
   padding-right: 3em;
-  margin-top: .2em;
+  //margin-top: .2em;
+  margin: .2em;
   position: fixed;
-  border-right: 4px solid $green-background-color;
+  //border-right: 4px solid $green-background-color;
 }
 
 .home-right {
   background-color: $background-color;
   border-right: 4px solid $site-green;
   margin: 0 0 0 0;
-  margin-left: $content-width / 2 + 15px;
+  margin-left: $content-width * .45  + 15px;
   padding: 2em 2em;
 }
 
@@ -92,7 +94,7 @@ img.left-star {
 img.right-star {
   width: 80px;
   float: right;
-  margin: .5em 0 .5em 1em;
+  margin: -2em 0 .5em 1em;
 }
 
 .headshot {
@@ -103,6 +105,7 @@ img.right-star {
 
   img#headshot {
     max-width: 400px; 
+    border: .2em solid $background-color;
   }
 
   .caption {
@@ -357,6 +360,10 @@ section#bio {
   }
   .home {
     @include flex-direction-column;
+  }
+
+  h1.mid-title {
+    font-size: 1.2em;
   }
 }
 
