@@ -5,24 +5,34 @@
   width: $content-width;
   margin: 0 auto;
   background-color: $background-color;
-  border-right: 1px solid $site-green;
+  //border-right: 1px solid $site-green;
 }
+
+.top-header {
+  min-height: 4em;
+}
+
+$menu-height: 60px;
+$menu-margin-top: 20px;
+$top-offset: $menu-height + $menu-margin-top;
+$right-side-margin: $content-width * .45  + 15px;
+
+$section-padding: 32px;
 
 
 .site-header {
   width: inherit;
   padding: 0 1em 0 0 ;
   background-color: $site-green;
-  opacity: 0.80;
+  //opacity: 0.80;
   color: #FFFFFF;
-  min-height: 4em;
+  min-height: $menu-height;
   position: fixed;
   top: 0;
-  margin-top: 0.4em;
+  //margin-top: $menu-margin-top;
   vertical-align: middle;
-
-  border-bottom: 2px solid #DDDDDD;
-  border-top: 2px solid #DDDDDD;
+  border-top: $menu-margin-top solid $body-background-color; 
+  //border-top: 2px solid #DDDDDD;
 
   .site-nav {
     float: right;
@@ -42,6 +52,7 @@
     }
   }
 }
+
  
 .site-title {
   @include relative-font-size(2);
@@ -56,31 +67,31 @@
     text-decoration: none;
   }
   text-align:right;
-  display: inline-block;
-  width: $content-width * .45;
-  padding-right: 1.5em;
+  //display: inline-block;
+  //width: $content-width * .45;
+  //padding-right: 1.5em;
+  margin-left: $right-side-margin;
+  padding-left: $section-padding * 1.5;
 }
 
+
 .home {
-  min-height: calc(100vh - 4.2em);
-  margin-top: 4.23em;
+  min-height: calc(100vh - #{$top-offset});
+  //margin-top: 4.23em;
   //margin-bottom: -4.2em;
   @extend %display-flex;
   @extend %flex-direction-row;
 }
 
 .home-left {
-  //background-color: $background-color;
   background-color: $fade-background;
   color: #333;
   width: $content-width * .45;
-  min-height: calc(100vh - 4.2em);
-  //min-height: 100%;
+  min-height: calc(100vh - #{$menu-margin-top});
   padding-right: 3em;
-  //margin-top: .2em;
   margin: .2em;
   position: fixed;
-  //border-right: 4px solid $green-background-color;
+  top: $menu-margin-top;
   text-align: right;
 }
 
@@ -88,8 +99,9 @@
 .home-right {
   background-color: $background-color;
   margin: 0 0 0 0;
-  margin-left: $content-width * .45  + 15px;
-  padding: 2em 2em;
+  margin-left: $right-side-margin;
+  padding: $section-padding;
+  padding-top: $top-offset + 20px;
 }
 
 img.left-star {
@@ -106,7 +118,7 @@ img.right-star {
 .headshot {
   //vertical-align: middle;
   margin-left: 3em;
-  margin-top: 2em;
+  margin-top: 20px;
   margin-bottom: auto;
 
   img#headshot {
@@ -170,11 +182,12 @@ h1.mid-title {
   background-color: transparent;
 }
 
-section#bio {
-
+section {
+  padding: $section-padding;
+  padding-top: $section-padding * 3;
+  margin-left: $right-side-margin;
 
 }
-
 
 
 /**

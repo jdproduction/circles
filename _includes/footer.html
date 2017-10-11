@@ -40,5 +40,25 @@
     </div>
 
   </div>
+  <script>
+    $(function(){
+      $.scrollify({
+        section: ".page-section",
+        interstitialSection: ".site-footer, .top-header",
+        //offset: 100,
+        before: ccScroll,
+      });
+    });
 
+    function ccScroll(index,sections){
+      console.log("ccScroll: index = " + index);
+      console.log("index is a " + typeof index);
+
+      if (index !== '1') {
+
+      }
+
+    }
+
+  </script>
 </footer>
