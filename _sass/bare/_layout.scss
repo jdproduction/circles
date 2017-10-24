@@ -28,6 +28,7 @@ $picture-margin: 3px;
   color: #FFFFFF;
 
   position: fixed;
+  z-index: 1;
   top: 0;
 
   vertical-align: middle;
@@ -88,10 +89,11 @@ $picture-margin: 3px;
   background-color: $fade-background;
   color: #333;
   width: $content-width * .45;
-  min-height: calc(100vh - #{$menu-margin-top});
+  min-height: calc(100vh - #{$menu-margin-top} - (#{$picture-margin} * 2));
   padding-right: 3em;
   margin: $picture-margin;
   position: fixed;
+  z-index: 2;
   top: $menu-margin-top;
   text-align: right;
 }
