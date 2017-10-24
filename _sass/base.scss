@@ -13,6 +13,8 @@ $spacing-unit:     30px !default;
 
 $site-green: #158470;
 $site-light-green: #8DC63F;
+$color-of-claires-shirt: #054764;
+$blue: fade-out(desaturate($color-of-claires-shirt,5%), 0.2);
 $green-background-color: lighten(desaturate($site-green, 50% ), 40%);
 $site-red: #EF4136;
 $site-orange: #F7941D;

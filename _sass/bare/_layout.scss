@@ -19,7 +19,6 @@ $right-side-margin: $content-width * .45  + 15px;
 
 $section-padding: 32px;
 
-
 .site-header {
   width: inherit;
   padding: 0 1em 0 0 ;
@@ -104,15 +103,51 @@ $section-padding: 32px;
   padding-top: $top-offset + 20px;
 }
 
+.home-right, .page-section {
+  h3 {
+    //color: $site-green;
+    color: $blue;
+    text-align:left;
+    margin-bottom: 2em;
+    font-weight: 500;
+    span {
+      //border-top: 4px solid $blue;
+      border-bottom: 2px solid $blue;
+      padding: .25em 3.5em .25em .25em;
+    }
+  }
+
+  a, a:visited {
+    color: $blue;
+    &[target="_blank"]:after{
+      content:" " url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAVklEQVR4Xn3PgQkAMQhDUXfqTu7kTtkpd5RA8AInfArtQ2iRXFWT2QedAfttj2FsPIOE1eCOlEuoWWjgzYaB/IkeGOrxXhqB+uA9Bfcm0lAZuh+YIeAD+cAqSz4kCMUAAAAASUVORK5CYII=);  
+      vertical-align: top;
+    }
+  }
+
+}
+
 img.left-star {
-  width: 100px;
+  width: 70px;
   float: left;
   margin-top: .5em;
+  margin-right: 1em;
 }
+
+
+img.left-star2 {
+  width: 90px;
+  float: left;
+  margin-top: .5em;
+  margin-right: 1em;
+  transform: rotate(70deg);
+}
+
 img.right-star {
   width: 80px;
   float: right;
-  margin: -2em 0 .5em 1em;
+  margin: -1em 0 .5em 1em;
+  transform: rotate(180deg);
 }
 
 .headshot {
@@ -135,7 +170,6 @@ img.right-star {
   }
 }
 
-
 .blurb {
   @include relative-font-size(1.2);
   //font-weight: 500;
@@ -143,26 +177,26 @@ img.right-star {
   text-align:right;
 
   &:not(:first-of-type) {
-    border-top: 2px solid $green-background-color;
+    //border-top: 2px solid $green-background-color;
     padding-top: 2em;
   }
 
-
-  h3 {
-    text-align:left;
-  }
-
   &.right {
-    //border-bottom: 2px solid $green-background-color;
-
+    margin-top: 2em;
     text-align: left; 
-   // @include relative-font-size(1);
     background-position: right top;
-    //padding: 1em ;
 
-    p.first {
-      //padding-right: 140px;
+  }
+}
+
+div.home-right {
+  .blurb.right {
+    p {
+      margin-bottom: 3em;
     }
+      p:nth-of-type(2n+1){
+        text-align: right;
+      }
   }
 }
 
@@ -181,6 +215,41 @@ h1.mid-title {
   float: right;
   background-color: transparent;
 }
+
+
+// What we believe
+ul.believe-list {
+  list-style: none;
+  margin-left: 0;
+  li {
+    margin-bottom: 1.5em;
+    margin-left: 0;
+    //padding-left: 25px;
+    line-height: 1.5;
+    //background: url('images/staricon.png') no-repeat 0 3px;
+    padding: 0 0 0 30px; 
+    position: relative;
+    //overflow: hidden;
+    &:before {
+      content: '';
+      position: absolute;
+      width: 35px;
+      height: 35px;
+      top: 5px;
+      left: -20px;
+      background: url('images/star.png') no-repeat 0 0;
+      background-size: contain;
+    }
+    @for $i from 1 through 12 {
+      &:nth-of-type(12n+#{$i}):before {
+        -ms-transform: rotate(#{$i*60}deg);
+        -webkit-transform: rotate(#{$i*60}deg);
+        transform: rotate(#{$i*60}deg);
+      }
+    }
+  }
+}
+
 
 section {
   padding: $section-padding;
