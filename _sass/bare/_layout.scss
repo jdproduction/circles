@@ -516,6 +516,11 @@ section.page-section {
   section.page-section {
     margin: 0;
     padding: $section-padding;
+
+    &:nth-of-type(2n){
+      background-color: $fade-background;
+    }
+
   }
 
   .site-footer {
