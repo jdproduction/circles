@@ -520,7 +520,10 @@ section.page-section {
     &:nth-of-type(2n){
       background-color: $fade-background;
     }
+  }
 
+  .page-section h3 span {
+    padding: 0;
   }
 
   .site-footer {
