@@ -6,15 +6,30 @@
 </footer>
 
   <script>
+    
+    var windowWide = $(window).width() > 600;
+    var lastSize = windowWide ? 'wide' : 'narrow';
+    var sections = {'wide': '.page-section', 'narrow': '.home-left, .page-section' }
+
     $(function(){
       $.scrollify({
-        section: ".page-section",
-        interstitialSection: "site-footer, .top-header",
+        section: sections[lastSize], 
+        interstitialSection: "site-footer",
         setHeights: false,
         //offset: 100,
         before: ccScroll,
+        afterResize: adjustSections
       });
     });
+
+    function adjustSections(){
+      var width = $(window).width();
+      var thisSize = width > 600 ? 'wide' : 'narrow';
+      if (thisSize != lastSize){
+        lastSize = thisSize;
+        $.scrollify.setOptions({section: sections[thisSize]});
+      }
+    }
 
     function ccScroll(index,sections){
       console.log("ccScroll: index = " + index);
