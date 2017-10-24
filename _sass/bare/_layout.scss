@@ -266,7 +266,7 @@ section.page-section {
  */
 .site-footer {
   //border-top: 1px solid $grey-color-light;
-  @include relative-font-size(0.85);
+  @include relative-font-size(0.75);
   padding: 1em 0;
   margin-left: ($content-width * .45) + $picture-margin ;
 
@@ -277,10 +277,6 @@ section.page-section {
 
 }
 
-.footer-heading {
-  @include relative-font-size(1.125);
-  margin-bottom: $spacing-unit / 2;
-}
 
 .contact-list,
 .social-media-list {
@@ -289,8 +285,6 @@ section.page-section {
 }
 
 .footer-col-wrapper {
-  @include relative-font-size(0.9375);
-  //color: $grey-color;
   margin-left: -$spacing-unit / 2;
   @extend %clearfix;
 }
