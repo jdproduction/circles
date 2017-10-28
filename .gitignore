@@ -4,3 +4,7 @@ Gemfile.lock
 _site
 *.gem
 .jekyll-metadata
+*.swp
+*.swo
+*.swn
+
