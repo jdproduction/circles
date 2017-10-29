@@ -147,6 +147,8 @@ img.left-star2 {
   margin-top: .5em;
   margin-right: 1em;
   margin-left: -.5em;
+      -ms-transform: rotate(70deg);
+      -webkit-transform: rotate(70deg);
   transform: rotate(70deg);
 }
 
@@ -154,7 +156,15 @@ img.right-star {
   width: 80px;
   float: right;
   margin: 0 -.5em .5em 1em;
-  transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      -webkit-transform: rotate(180deg);
+  transform: rotate(150deg);
+
+  &.second {
+    -ms-transform: rotate(240deg);
+    -webkit-transform: rotate(240deg);
+    transform: rotate(240deg);
+  }
 }
 
 img.center-star {
@@ -202,10 +212,6 @@ img.center-star {
   @include relative-font-size(1.2);
   padding: 0 1em 1em 1em ;
   text-align:right;
-
-  &:not(:first-of-type) {
-    padding-top: 2em;
-  }
 
   &.right {
     margin-top: 2em;
