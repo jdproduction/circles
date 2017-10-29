@@ -22,7 +22,7 @@ baseurl: "/" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: claire
 github_username:  clairehd
-
+google_analytics: UA-108874098-1
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
