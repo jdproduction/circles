@@ -216,3 +216,35 @@ pre {
     padding-top: 5px;
   }
 }
+
+$social_color: darken($green-background-color, 8%);
+
+.email {
+  margin-bottom: .25rem;
+}
+
+.social {
+  // background-color: white;
+  width: 100%;
+  text-align: right;
+  margin-bottom: 1rem;
+  
+  a {
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    background-size: cover;
+    border: 1px solid $social_color;
+    border-radius: 2px;
+    background-color: $social_color; 
+    &.linkedin {
+      background-image: url(images/linkedin.png);
+      margin-right: .2rem;
+    }
+    &.twitter {
+      background-image: url(images/twitter.png);
+    }
+  }
+
+}
+
