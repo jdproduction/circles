@@ -219,9 +219,17 @@ pre {
 
 $social_color: darken($green-background-color, 8%);
 
+.subslogan {
+  margin-bottom: .5rem;
+}
+
 .email {
   margin-bottom: .25rem;
+  a, a:visited, a:hover {
+    color: $site-green;
+  }
 }
+
 
 .social {
   // background-color: white;
@@ -237,6 +245,9 @@ $social_color: darken($green-background-color, 8%);
     border: 1px solid $social_color;
     border-radius: 2px;
     background-color: $social_color; 
+
+
+
     &.linkedin {
       background-image: url(images/linkedin.png);
       margin-right: .2rem;
