@@ -305,6 +305,18 @@ section.page-section {
 }
 
 
+div.graph {
+  margin-bottom: .75rem;
+}
+
+span.question {
+  font-weight: 500;
+  color: darken($text_color, 10%);
+  display: block;
+}
+
+
+
 /**
  * Site footer
  */
