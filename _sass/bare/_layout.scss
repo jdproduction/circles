@@ -113,7 +113,7 @@ $picture-margin: 3px;
 }
 
 .page-section {
-  h3 {
+  h3, h4 {
     //color: $site-green;
     color: $blue;
     text-align:left;
@@ -315,6 +315,18 @@ span.question {
   display: block;
 }
 
+#individual-section h4 {
+ margin-top: 1.5rem;
+}
+
+
+div.testamonial {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  font-style: italic;
+  font-size: 85%;
+}
 
 
 /**
