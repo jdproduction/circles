@@ -323,9 +323,19 @@ span.question {
 div.testamonial {
   margin-left: 1rem;
   margin-right: 1rem;
-  margin-bottom: 1rem;
   font-style: italic;
   font-size: 85%;
+}
+
+div.star-sep {
+  display: block;
+  width: 100%;
+  height: 2rem;
+
+  background: url('images/star.png') no-repeat center center;
+  background-size: contain;
+  margin-top: .5rem;
+  margin-bottom: 1rem;
 }
 
 
