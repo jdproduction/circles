@@ -492,8 +492,13 @@ div.star-sep {
 
 // from 1200 to 800
 @include media-query($content-width){
+
   #site-wrapper{
     width: 100%; 
+  }
+
+  .site-header {
+    border-top: none;
   }
 
   .site-title {
@@ -502,6 +507,8 @@ div.star-sep {
 
   .home-left {
     width: calc(50% - #{$menu-margin-top});
+    top: 0;
+
     .headshot {
       margin-left: 2em; 
       img#headshot {
@@ -527,10 +534,17 @@ div.star-sep {
     //margin-left: ($content-width * .45) + $picture-margin ;
   }
 
+  section.page-section {
+    padding-top: ($section-padding * 3) - $menu-margin-top;
+  }
+
+
 }
 
 // 480 to 800
 @include media-query($on-laptop){
+
+
   #site-wrapper{
     width: 100%; 
   }
@@ -604,7 +618,7 @@ div.star-sep {
 
   section.page-section {
     margin: 0;
-    padding: ($section-padding * 1.5) ($section-padding/2);
+    padding: ($section-padding * 2) ($section-padding/2);
 
     &:nth-of-type(2n){
       background-color: $fade-background;
