@@ -507,6 +507,7 @@ div.star-sep {
 
   .home-left {
     width: calc(50% - #{$menu-margin-top});
+    min-height: calc(100vh - (#{$picture-margin} * 2));
     top: 0;
 
     .headshot {
